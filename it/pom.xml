@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>mapstruct-builder-accessor-parent</artifactId>
+        <groupId>com.github.filiphr</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>mapstruct-builder-accessor-it</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-jdk8</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${mapstruct.version}</version>
+            <!-- IntelliJ does not pick up the processor if it is not in the dependencies.
+             There is already an open issue for IntelliJ see https://youtrack.jetbrains.com/issue/IDEA-150621
+            -->
+            <scope>provided</scope>
+            <!--<optional>true</optional>-->
+        </dependency>
+        <dependency>
+            <groupId>com.github.filiphr</groupId>
+            <artifactId>mapstruct-builder-accessor</artifactId>
+            <version>${project.version}</version>
+            <!-- IntelliJ does not pick up the processor if it is not in the dependencies.
+             There is already an open issue for IntelliJ see https://youtrack.jetbrains.com/issue/IDEA-150621
+            -->
+            <!--<optional>true</optional>-->
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apiguardian</groupId>
+            <artifactId>apiguardian-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
