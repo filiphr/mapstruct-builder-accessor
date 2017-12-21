@@ -6,7 +6,7 @@
     <parent>
         <artifactId>mapstruct-builder-accessor-parent</artifactId>
         <groupId>com.github.filiphr</groupId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>mapstruct-builder-accessor-it</artifactId>
