@@ -4,6 +4,8 @@ This project supports an alternative `AccessorNamingStrategy` which supports dif
 
 **IMPORTANT**: This is not a support for using builders for mappings, but just the discovery of the properties within a builder type.
 
+**IMPORANT2**: This is not yet published on maven central. If you want to use it as a dependency you can use [jitpack.io](https://jitpack.io/#filiphr/mapstruct-builder-accessor/)  
+
 ## Using
 
 In order to use this accessor strategy one just needs to add the following dependencies:
